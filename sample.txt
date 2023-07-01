@@ -1,0 +1,4 @@
+deleted material form infinity.html
+<div class="blink">
+            <marquee direction=""><span>Upto 40 to 50% off Hurry UP !<br>With Free Delivery!</span></marquee>
+</div>

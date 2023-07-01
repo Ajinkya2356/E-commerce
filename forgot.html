@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>Forgot Password</title>
+</head>
+<style>
+    .container img {
+        /* border: 2px solid black; */
+        margin: 5px 27px 11px 720px;
+    }
+
+    .container h1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #submit {
+        margin: 14px 1px;
+        width: 50%;
+        background-color: rgb(236, 222, 89);
+        border: 2px solid black;
+        border-radius: 5px;
+        padding-left: 257px;
+    }
+
+    #submit:hover {
+        background-color: rgb(241, 237, 193);
+    }
+
+    .container1 {
+        display: flex;
+        border: 2px solid black;
+        width: 40%;
+        margin: 23px 5px 5px 528px;
+    }
+
+    ul li {
+        list-style: none;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* text-align: center; */
+        margin: 5px 5px 5px 5px;
+    }
+
+    #input1 {
+        margin: 10px 50px 5px 5px;
+        padding: 5px 304px 5px 10px;
+    }
+
+    button {
+        margin: 10px 50px 5px 5px;
+        padding: 5px 304px 5px 10px;
+        text-align: center;
+    }
+    button a{
+        text-decoration: none;
+        color:black;
+        font-weight:bold;
+    }
+</style>
+<script defer>
+    let d = 0;
+    function checkPassword(form) {
+        number1 = form.number1.value;
+        let c = "";
+
+        if (number1 == c) {
+            alert("Please enter your name first");
+        }
+        else if (number1.length <= 9) {
+            alert("Enter the valid number");
+        }
+        else {
+            d = 1;
+            alert("OTP generated successfully");
+            return (true);
+        }
+        
+    }
+    function check()
+    {
+        if(d==1)
+        {
+            location.replace("http://127.0.0.1:5501/project/OTP.html");
+        }
+    }
+</script>
+
+<body>
+    <div class="container">
+        <img src="brand1-removebg-preview.png" alt="">
+    </div>
+    <div class="container">
+        <h1>Forgot password</h1>
+        <div class="container1">
+            <form onsubmit="return checkPassword(this)">
+                <ul>
+                    <li>Email or mobile phone number</li>
+                    <input type="number/email" name="number1" id="input1" placeholder="at least 10 digits">
+                    <!-- <li>Enter OTP</li>
+                    <input type="number" name="number2"> -->
+                    <button id="submit" type="submit" value=" " onclick="check()"><a href="OTP.html">Send OTP</a></button>
+                </ul>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
